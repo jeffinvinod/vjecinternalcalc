@@ -1,0 +1,159 @@
+<html>
+<body>
+    <p id="vjec">VJEC Internal Calculator</p>
+    <p> First Internal exam mark: <input type="number" id="a"> </p>
+    
+    <p> Second Internal exam mark: <input type="number" id="b"> </p>
+    
+    <p> Third Internal exam mark: <input type="number" id="c"> </p>
+    
+    <p> First Assignment mark out of 10: <input type="number" id="e"> </p>
+    
+    <p> Second Assignment mark out of 10: <input type="number" id="f"> </p>
+    
+
+<button onclick="myFunction()">Calculate</button>
+    
+    <p id="demo"></p>
+
+
+<script>
+    document.getElementById("vjec").style.color = "blue";
+document.getElementById("vjec").style.fontFamily = "Arial";
+document.getElementById("vjec").style.fontSize = "larger";
+function myFunction()
+    {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        var e = document.getElementById("e").value;
+        var f = document.getElementById("f").value;
+var num1=parseFloat(a);
+var num2=parseFloat(b);
+var num3=parseFloat(c);
+var num4=parseFloat(e);
+var num5=parseFloat(f);
+try
+{
+if(num1>=num2)
+{ if(num1>=num3)
+{
+high1 = num1;
+}
+else
+{high1 = num3;}
+}
+else if(num2>=num3)
+{ if(num2>=num1)
+{
+high1=num2;
+}
+else
+{
+high1=num1;
+}
+}
+if(high1==num1)
+{
+num1=0;
+}
+else if(high1==num2)
+{
+num2=0;
+}
+else 
+{
+num3=0;
+}
+if(num1>=num2)
+{ if(num1>=num3)
+{
+high2 = num1;
+}
+else
+{high2 = num3;}
+}
+else if(num2>=num3)
+{ if(num2>=num1)
+{
+high2=num2;
+}
+else
+{
+high2=num1;
+}
+}
+if(high2==num1)
+{
+num1=0;
+}
+else if(high2==num2)
+{
+num2=0;
+}
+else
+{
+num3=0;
+}
+if(num1>=num2)
+{ if(num1>=num3)
+{
+high3 = num1;
+}
+else
+{high3 = num3;}
+}
+else if(num2>=num3)
+{ if(num2>=num1)
+{
+high3=num2;
+}
+}
+else
+{
+high3=num1;
+}
+d=(high1*2/10)+(high2*2/10)+(high3/6)+(num4+num5)/2;
+if(d<22.5)
+ { gap=22.5-d;
+ actgap=gap*10;
+ if(actgap>high2)
+ {
+ d=(high1*2/10)+(high2/6)+(high3/10)+(num4+num5)/2;
+ gap=22.5-d;
+ actgap=gap*5;
+ }
+ else if(actgap>high3)
+ {
+ d=(high1*2/10)+(high2*2/10)+(high3/6)+(num4+num5)/2;
+ gap=22.5-d;
+ actgap=gap*6;
+ }
+ else
+ {
+ d=(high1*2/10)+(high2*2/10)+(high3/6)+(num4+num5)/2;
+ gap=22.5-d;
+ actgap=gap*10;
+ } 
+document.getElementById("demo").innerHTML = "Your current sessional mark is " +d + " Keep Studying! You need " +actgap;
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.fontFamily = "Arial";
+document.getElementById("demo").style.fontSize = "larger";
+}
+else
+{ 
+    
+ document.getElementById("demo").innerHTML = " Enjoy!  You have " +d;
+    document.getElementById("demo").style.color = "green";
+    document.getElementById("demo").style.fontFamily = "Arial";
+document.getElementById("demo").style.fontSize = "larger";
+}
+}
+catch(err)
+{
+document.getElementById("demo").innerHTML = " Sorry!! Please try again by interchanging marks!";
+}
+    }
+</script>
+</body>
+</html>
