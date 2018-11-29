@@ -3,14 +3,14 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.intcalc.example"
     versionCode = "10"
-    version     = "1.0.0" >
+    version     = "2.0.0" >
 
 <!-- versionCode is optional and Android only -->
 
   <name>InternalCalc</name>
 
   <description>
-      An app for checking whether study or not.
+      An app for checking whether study or not for 4th internal.
   </description>
 <icon src="icon.png" />
 
