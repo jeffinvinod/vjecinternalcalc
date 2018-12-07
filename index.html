@@ -1,20 +1,75 @@
 <html>
 <body>
-    <p id="vjec">VJEC Internal Calculator</p>
-    <p> First Internal exam mark: <input type="number" id="a"> </p>
-    
-    <p> Second Internal exam mark: <input type="number" id="b"> </p>
-    
-    <p> Third Internal exam mark: <input type="number" id="c"> </p>
-    
-    <p> First Assignment mark out of 10: <input type="number" id="e"> </p>
-    
-    <p> Second Assignment mark out of 10: <input type="number" id="f"> </p>
-    
+    <head>
+        <style>
+            #a{
+    background-color:transparent;
+}
+            #b{
+    background-color:transparent;
+}
+            #c{
+    background-color:transparent;
+}
+            #e{
+    background-color:transparent;
+}
+            #f{
+    background-color:transparent;
+}
+.center {
+  text-align: center;
+}
+          
+            .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
-<button onclick="myFunction()">Calculate</button>
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+            body {
+    background-image: url("back2.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+}
+</style>
+    </head>
+    <div class="center">
+    <p id="vjec">VJEC Internal Calculator</p>
+        <p> First Internal exam mark:</p>
+        <p> <input type="number" id="a"> </p>
+    
+        <p> Second Internal exam mark:</p>
+        <p> <input type="number" id="b"> </p>
+    
+        <p> Third Internal exam mark:</p>
+        <p> <input type="number" id="c"> </p>
+        
+        <p> Enter Assignment marks</p>
+            <p> <input type="number" id="e"> <input type="number" id="f"> </p> 
+
+<button class="button button1" onclick="myFunction()">Calculate</button>
     
     <p id="demo"></p>
+    </div>
 
 
 <script>
